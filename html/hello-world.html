@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color: gray;" background="background.png">
+        <h1 style="background-color: rgb(212, 212, 238); font-family: 'Times New Roman', Times, serif;">
+            This is Heading 1
+        </h1>
+        <h2 style="text-align: center;">
+            This is Heading 2
+        </h2>
+        <p>
+            <!-- 点击Baidu.com会在这个window直接跳转到百度的首页, 可以通过target属性来控制浏览器如何响应点击行为 -->
+            paragraph, here is a link to <a href="https://www.baidu.com"> Baidu.com </a>
+            <br />
+            <!-- a表示anchor -->
+            paragraph, different action for browser when click <a href="https://www.baidu.com" target="_blank"> Baidu.com </a>
+            <br />
+            <!-- 但点击the program的时候, 会实现内容跳转, 同时url变成了/path/to/hello-world.html#code1 -->
+            You can reference <a href="#code1">the program</a> for more detailed information about this algorithm.
+            <br />
+            Send me an <a href="mailto:chenxjhit@163.com?subject=Message%20From%20Website">emial</a> if you are interested about me.
+        </p>
+        <!-- <hr />可以在web page上画出一道分割线, 貌似<hr>和<hr />等效果, 下面的<br>和<br />等效果, 但是best practice还是写成<br /> -->
+        <hr>
+        <p>
+            I will show you a picture of my idol.<br />
+            <!-- 如果需要换行,使用<br>元素,这是一个空元素,表示line break -->
+            <img src='idol.jpg' width="256" height="256"/>
+            <br />
+            <!-- The alt attribute tells the reader what he or she is missing on a page if the browser can’t load images. -->
+            Ok, I show you an image with hyper link: <a href="https://www.baidu.com" target="_blank"><img src="baidu.png" alt="baidu" width="64", height="32" /></a>
+        </p>
+        <hr />
+        <p>
+            <em>
+                This line is emphasized.
+            </em>
+            <br />
+            <b>
+                This line is bold.
+            </b>
+            <br />
+            <i>
+                This line is italic style.
+            </i>
+        </p>
+        <hr />
+        <pre >
+            Just skip
+            some 
+            lines
+            aaa
+            lines
+            aaa
+            lines
+            understand
+            haha
+            houhou
+            awu
+            miao
+            mewow
+            hi
+            hello
+            love
+            you
+            forever
+            hh
+            interesting
+        </pre>
+        <hr />
+        <pre>
+            <!-- pre tag里的文字可以保留换行和空格, 可以很方便地来显示代码 -->
+            <a name="code1">Content in pre tag can maitain the format in HTML source file. </a>
+            
+            And it is useful to display code:
+            
+            for i in range(10):
+                print(i)
+        </pre>
+        <hr />
+        <table border="10" align="center" cellpadding="10" cellspacing="10">
+            <caption>Some Cute Animals</caption>
+            <tr>
+                <!-- th stands for table heading -->
+                <th> </th>
+                <th> Column 1 </th>
+                <th> Column 2 </th>
+                <!-- 使用colspan和rowspan属性来实现一个cell占据多列或多行 -->
+                <th colspan="2"> Column 3 and Colum 4 </th>
+
+            </tr>
+            <tr>
+                <th> Group One </th>
+                <td> <img src="animals/cat.webp" width="112" height="112"/> </td>
+                <td> <img src="animals/dog.webp" width="112" height="112"/> </td>
+                <td> <img src="animals/hippo.webp" width="112" height="112"/> </td>
+                <td> <img src="animals/lion.webp" width="112" height="112"/> </td>
+            </tr>
+            <tr>
+                <th> Group Two </th>
+                <td> <img src="animals/monkey.webp" width="112" height="112"/> </td>
+                <td> <img src="animals/panda.webp" width="112" height="112"/> </td>
+                <td> <img src="animals/peacock.webp" width="112" height="112"/> </td>
+                <td> <img src="animals/pig.webp" width="112" height="112"/> </td>
+            </tr>
+        </table>
+        <hr />
+        <!-- HTML支持ordered list, unordered list及definition list.可以在list里嵌套list -->
+        <ul>
+            <li> Coffe </li>
+            <li> Tea </li>
+            <li> Milk Tea </li>
+        </ul>
+        <ul type="square">
+            <li> Coffe </li>
+            <li> Tea </li>
+            <li> Milk Tea </li>
+        </ul>
+        <ul type="circle">
+            <li> Coffe </li>
+            <li> Tea </li>
+            <li> Milk Tea </li>
+        </ul>
+        <hr />
+        <table border="10" align="center">
+            <tr>
+                <td>
+                    <ol>
+                        <li> Coffe </li>
+                        <li> Tea </li>
+                        <li> Milk Tea </li>
+                    </ol>
+                </td>
+                <td>
+                    <ol type="A">
+                        <li> Coffe </li>
+                        <li> Tea </li>
+                        <li> Milk Tea </li>
+                    </ol>
+                </td>
+                <td>
+                    <ol type="I">
+                        <li> Coffe </li>
+                        <li> Tea </li>
+                        <li> Milk Tea </li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+        <h />
+        <!-- HTML中的form元素可以让用户在里面输入信息 -->
+        <form>
+            <select name="Age">
+                <option value="Teenageer"> 0-18 </option>
+                <option value="The Young"> 18-50 </option>
+                <option value="The Old"> 50-100 </option>
+            </select>
+            <br />
+            Male:
+            <input type="radio" checked="checked" name="Gender" value="Male"/>
+            <br />
+            Female:
+            <input type="radio"  name="Gender" value="Female"/>
+            <br />
+            User Name:
+            <input type="text" name="User Name"/>
+            <br />
+            Password:
+            <input type="text" name="Password"/>
+            <br />
+            <input type="button" value="Submit"/>
+        </form>
+    </body>
+</html>
